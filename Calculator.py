@@ -4,6 +4,7 @@ from tkinter import *
 
 root = Tk()
 root.title("Calculator")
+root.iconbitmap('GUIProjects/calc_icon.png')
 
 # This is the "Screen" of your calculator that shows the numbers you choose
 e = Entry(root, width=35, borderwidth=1)
@@ -85,6 +86,7 @@ button_multiply = Button(root, text="X", padx=39, pady=20, fg="orange", command=
 button_divide = Button(root, text="/", padx=42, pady=20, fg="orange", command=lambda: divide())
 button_equals = Button(root, text="=", padx=165, pady=20, command=lambda: equals())
 button_erase = Button(root, text="Clear", padx=91, pady=20, command=lambda: clear())
+button_quit = Button(root, text="Exit", padx=39, pady=20, fg="red", command=root.quit)
 
 # Put the buttons on the screen in order they should show up on the calculator 
 button_7.grid(row = 1, column=0)
@@ -106,7 +108,7 @@ button_0.grid(row = 4, column=0)
 button_erase.grid(row = 4, column = 1, columnspan=2)
 button_add.grid(row = 4, column = 3)
 
-
+button_quit.grid(row=5, column=3)
 button_equals.grid(row = 5, column = 0, columnspan=3)
 
 
